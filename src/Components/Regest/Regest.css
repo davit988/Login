@@ -1,0 +1,55 @@
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.regest {
+  backdrop-filter: blur(17.78645896911621px);
+  background: rgba(88, 130, 193, 0.28);
+  height: 500px;
+  width: 400px;
+  border-radius: 35px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.regest h1 {
+  font-weight: 400;
+  font-size: 34px;
+  color: #fff;
+}
+
+.regest p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #fff;
+}
+
+.regest form input {
+  border: 0.71px solid #bcbec0;
+  border-radius: 5px;
+  padding: 16px;
+  width: 250px;
+  height: 32px;
+}
+
+.regest form {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+button {
+  align-self: center;
+  border-radius: 7px;
+  background: #003465;
+  width: 250px;
+  height: 40px;
+  color: #fff;
+  margin-top: 30px;
+}
