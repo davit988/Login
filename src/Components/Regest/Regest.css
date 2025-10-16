@@ -53,3 +53,29 @@ button {
   color: #fff;
   margin-top: 30px;
 }
+
+.reg {
+  position: relative;
+}
+.reg p:last-child {
+  color: darkred;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 120%;
+  left: 50%;
+  animation-name: error;
+  animation-duration: 0.5s;
+  font-size: 18px;
+  
+}
+
+@keyframes error {
+  from {
+    opacity: 0.4;
+    top: 100%;
+  }
+  to {
+    opacity: 1;
+    top: 120%;
+  }
+}
