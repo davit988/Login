@@ -7,8 +7,8 @@ header {
 .regest {
   backdrop-filter: blur(17.78645896911621px);
   background: rgba(88, 130, 193, 0.28);
-  height: 500px;
-  width: 400px;
+  height: 600px;
+  width: 500px;
   border-radius: 35px;
   padding: 30px;
   display: flex;
@@ -57,25 +57,10 @@ button {
 .reg {
   position: relative;
 }
+
+
 .reg p:last-child {
   color: darkred;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 120%;
-  left: 50%;
-  animation-name: error;
-  animation-duration: 0.5s;
+  text-align: center;
   font-size: 18px;
-  z-index: 999;
-}
-
-@keyframes error {
-  from {
-    opacity: 0.4;
-    top: 100%;
-  }
-  to {
-    opacity: 1;
-    top: 120%;
-  }
 }
