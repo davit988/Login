@@ -66,7 +66,7 @@ button {
   animation-name: error;
   animation-duration: 0.5s;
   font-size: 18px;
-  
+  z-index: 999;
 }
 
 @keyframes error {

@@ -1,6 +1,6 @@
-import React from "react";
 import { Formik } from "formik";
 import { validate } from "../../Schema/Schema";
+import { User } from "../User/User";
 
 import "./Regest.css";
 
