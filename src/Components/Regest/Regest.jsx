@@ -1,17 +1,12 @@
 import React from "react";
 import { Formik } from "formik";
-import * as YUP from "yup";
+import { validate } from "../../Schema/Schema";
 
 import "./Regest.css";
 
+
 export const Regest = () => {
-  const validate = YUP.object().shape({
-    name: YUP.string().min(3, "min lenght").required("filed is requered"),
-    userName: YUP.string().min(3, "min lenght").required("filed is requered"),
-    email: YUP.string().email().required("filed is requered"),
-    pass: YUP.string().min(3, "min lenght").required("filed is requered"),
-    retPass: YUP.string().required("wrong pass"),
-  });
+  
   return (
     <header>
       <div className="container">
@@ -21,7 +16,7 @@ export const Regest = () => {
             userName: "",
             email: "",
             pass: "",
-            retPass: "",
+            confirmPassword: "",
           }}
           onSubmit={(values) => console.log(values)}
           validationSchema={validate}
@@ -48,7 +43,9 @@ export const Regest = () => {
                     name="userName"
                     placeholder="Write Your User Name"
                   />
-                  {errors.userName && touched.userName && <p>{errors.userName}</p>}
+                  {errors.userName && touched.userName && (
+                    <p>{errors.userName}</p>
+                  )}
                 </div>
                 <div className="reg">
                   <p>email</p>
@@ -71,15 +68,17 @@ export const Regest = () => {
                   {errors.pass && touched.pass && <p>{errors.pass}</p>}
                 </div>
                 <div className="reg">
-                  <p>RetPass</p>
+                  <p>confirm Password</p>
                   <input
-                    value={values.retPass}
+                    value={values.confirmPassword}
                     onChange={handleChange}
-                    name="retPass"
-                    placeholder="Ret Password"
+                    name="confirmPassword"
+                    placeholder="confirm Password"
                   />
 
-                  {console.log(values.pass)}
+                  {touched.confirmPassword && errors.confirmPassword && (
+                    <p className="error">{errors.confirmPassword}</p>
+                  )}
                 </div>
                 <button type="sumbit">Regest</button>
               </form>
